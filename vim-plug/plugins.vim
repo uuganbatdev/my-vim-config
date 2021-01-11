@@ -19,7 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dikiaap/minimalist' 
     Plug 'justinmk/vim-sneak'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'SirVer/ultisnips' 
     Plug 'honza/vim-snippets' 
 call plug#end()
