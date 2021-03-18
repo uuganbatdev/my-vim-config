@@ -19,6 +19,54 @@ const $1Styled = styled.div\`
 export default $1
 endsnippet
 
+snippet str
+${$1}
+endsnippet
+
+snippet cl
+console.log($1)
+endsnippet
+
+snippet rs
+
+$1: {
+
+},
+
+endsnippet
+
+snippet rnc
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native'
+
+export default function $1 () {
+	
+	return (
+			<View style={s.container}>
+
+			</View>
+	)
+
+}
+
+let s = StyleSheet.create({
+
+})
+endsnippet
+
+snippet cn
+className='$1'
+endsnippet
+
+snippet scenter
+justifyContent: 'center',
+alignItems: 'center',
+endsnippet
+
+snippet div
+<div className='$1'>$2</div>
+endsnippet
+
 snippet Lorem 
 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
 endsnippet
@@ -27,6 +75,7 @@ snippet gs
 get_$1() {
 	return this.$1;
 }
+
 set_$1(new$1) {
 	this.$1 = new$1;
 }
