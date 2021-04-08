@@ -2,6 +2,17 @@ snippet el
 <$1>$2</${1/(\w+).*/$1/}>
 endsnippet
 
+snippet navcomp
+let $1Screen = () => {
+	return (
+		<$1.Navigator>
+
+		</$1.Navigator>
+	)
+}
+endsnippet
+
+
 snippet nc
 import styled from '@emotion/styled'
 
@@ -17,6 +28,16 @@ const $1Styled = styled.div\`
 
 \`
 export default $1
+endsnippet
+
+snippet effect
+useEffect(() => {
+	$1
+},[])
+endsnippet
+
+snippet log
+console.log($1)
 endsnippet
 
 snippet str
@@ -35,6 +56,28 @@ $1: {
 
 endsnippet
 
+snippet stl
+style={styles.$1} 
+endsnippet
+
+snippet 100
+width: '100%',
+height: '100%',
+$1
+endsnippet
+
+snippet img
+<Image style={styles.$1} source={require('$2')} />
+endsnippet
+
+snippet btn
+<TouchableOpacity style={styles.$2} onPress={() => console.log('btn')}>
+	<Text>
+		$1
+	</Text>
+</TouchableOpacity>
+endsnippet
+
 snippet rnc
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native'
@@ -42,15 +85,20 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function $1 () {
 	
 	return (
-			<View style={s.container}>
-
+			<View style={styles.container}>
+				<Text>$1</Text>
 			</View>
 	)
 
 }
 
-let s = StyleSheet.create({
-
+let styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: 'rgb( 170,82,47 )',
+	}
 })
 endsnippet
 
